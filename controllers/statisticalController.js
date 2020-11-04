@@ -1,11 +1,11 @@
-const express = require('express');
 var mongoose = require("mongoose");
-var router = express.Router();
+const Sdt = mongoose.model('Sdt');
+const Cts = mongoose.model('Cts');
 
-//================== router ==================
-
-router.get('/', (req, res) => {
+const statistical_index = (req, res) => {
   res.render("statistical/index")
-});
+}
 
-module.exports = router;
+module.exports = {
+  statistical_index,
+};

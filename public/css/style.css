@@ -1,0 +1,38 @@
+.main-view {
+  height: 100%;
+}
+
+.top-view {
+  margin-bottom: 10px;
+}
+
+.body-main {
+  height: 100%;
+}
+
+.body-left {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.body-right {
+}
+
+.header-review {
+  margin-bottom: 10px;
+}
+
+.nav-tab button {
+  margin: 10px;
+}
+
+.body-review {
+}
+
+.nav-pagination {
+  width: 100%;
+}
+
+.form-new {
+  border: 1px greenyellow solid;
+}

@@ -1,0 +1,26 @@
+<div class="col-md-8 offset-md-2">
+  <h3>SDT</h3>
+  <table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+      <tr class="d-flex">
+        <th class="col-5">Country</th>
+        <th class="col-5">Sale Code</th>
+        <th class="col-2 text-center"><a class="btn btn-success" href="/sdt/new"><i class="fa fa-plus"></i></a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% list.forEach((sdt) => { %>
+      <tr class="d-flex">
+        <td class="col-5"><%= sdt.country %></td>
+        <td class="col-5"><%= sdt.sale_code %></td>
+        <td class="col-2 text-center">
+          <a href="/sdt/edit/<%= sdt._id %>"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+          <a href="/sdt/delete/<%= sdt._id %>" onclick="return confirm('Are you sure to delete this record ?');"><i
+              class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>
