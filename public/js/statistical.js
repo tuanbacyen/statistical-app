@@ -5,7 +5,11 @@ $(document).ready(function () {
 function readDir() {
   $.ajax({
     url: "/read_dir",
-    type: "get",
+    data: {
+      directory: $("#path_folder").val(),
+      submission_id: $("#submission_id").val()
+    },
+    type: "post",
     success: function (result) {
       compare_sdt(result.data);
     }

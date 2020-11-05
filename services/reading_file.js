@@ -13,8 +13,8 @@ const json_file = () => {
   return data;
 }
 
-const xml_file = () => {
-  const directoryPath = path.join("D:\\statistical-app", '6587245783416832');
+const xml_file = (directory, submission_id) => {
+  const directoryPath = path.join(directory, submission_id);
   const list_path = walk(directoryPath);
   const list_file_xml = list_path.filter((x) => { return x.includes(".xml") });
 

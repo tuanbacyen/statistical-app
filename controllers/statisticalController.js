@@ -11,7 +11,7 @@ const statistical_index = async (req, res) => {
 
 const read_dir = (req, res) => {
   let data = [];
-  const data_sdt_xml = ReadDir.xml_file();
+  const data_sdt_xml = ReadDir.xml_file(req.body.directory, req.body.submission_id);
   data_sdt_xml.forEach((path) => { data.push(get_sdt(path)) });
   res.json({ "data": data });
 }
