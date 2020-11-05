@@ -1,0 +1,940 @@
+{
+  "ro_property": [
+    {
+      "name": "ro.actionable_compatible_property.enabled",
+      "value": "true"
+    },
+    {
+      "name": "ro.adb.secure",
+      "value": "1"
+    },
+    {
+      "name": "ro.af.client_heap_size_kbyte",
+      "value": "7168"
+    },
+    {
+      "name": "ro.allow.mock.location",
+      "value": "0"
+    },
+    {
+      "name": "ro.apex.updatable",
+      "value": "false"
+    },
+    {
+      "name": "ro.baseband",
+      "value": "sdm"
+    },
+    {
+      "name": "ro.bluetooth.emb_wp_mode",
+      "value": "true"
+    },
+    {
+      "name": "ro.bluetooth.wipower",
+      "value": "true"
+    },
+    {
+      "name": "ro.board.platform",
+      "value": "sdm660"
+    },
+    {
+      "name": "ro.boot.ap_serial",
+      "value": "0x2B34BC44"
+    },
+    {
+      "name": "ro.boot.baseband",
+      "value": "sdm"
+    },
+    {
+      "name": "ro.boot.boot_recovery",
+      "value": "0"
+    },
+    {
+      "name": "ro.boot.bootdevice",
+      "value": "c0c4000.sdhci"
+    },
+    {
+      "name": "ro.boot.bootloader",
+      "value": "G885FDXU4CTJ1"
+    },
+    {
+      "name": "ro.boot.carrierid.param.offset",
+      "value": "11534796"
+    },
+    {
+      "name": "ro.boot.cp_debug_level",
+      "value": "0x55FF"
+    },
+    {
+      "name": "ro.boot.debug_level",
+      "value": "0x4f4c"
+    },
+    {
+      "name": "ro.boot.em.did",
+      "value": "008C2B34BC44"
+    },
+    {
+      "name": "ro.boot.em.model",
+      "value": "SM-G885F"
+    },
+    {
+      "name": "ro.boot.em.status",
+      "value": "0x1"
+    },
+    {
+      "name": "ro.boot.flash.locked",
+      "value": "1"
+    },
+    {
+      "name": "ro.boot.hardware",
+      "value": "qcom"
+    },
+    {
+      "name": "ro.boot.prototype.param.offset",
+      "value": "11534812"
+    },
+    {
+      "name": "ro.boot.revision",
+      "value": "7"
+    },
+    {
+      "name": "ro.boot.sales.param.offset",
+      "value": "11534800"
+    },
+    {
+      "name": "ro.boot.sales_code",
+      "value": "MM1"
+    },
+    {
+      "name": "ro.boot.sec_atd.tty",
+      "value": "/dev/ttyMSM0"
+    },
+    {
+      "name": "ro.boot.ucs_mode",
+      "value": "0"
+    },
+    {
+      "name": "ro.boot.upload_offset",
+      "value": "11535348"
+    },
+    {
+      "name": "ro.boot.usrf",
+      "value": "11535344"
+    },
+    {
+      "name": "ro.boot.verifiedbootstate",
+      "value": "green"
+    },
+    {
+      "name": "ro.boot.warranty_bit",
+      "value": "0"
+    },
+    {
+      "name": "ro.bootimage.build.date",
+      "value": "Tue Oct 20 12:17:32 KST 2020"
+    },
+    {
+      "name": "ro.bootimage.build.date.utc",
+      "value": "1603163852"
+    },
+    {
+      "name": "ro.bootimage.build.fingerprint",
+      "value": "samsung/astarqltedx/astarqlte:10/QP1A.190711.020/G885FDXU4CTJ1:user/release-keys"
+    },
+    {
+      "name": "ro.bootloader",
+      "value": "G885FDXU4CTJ1"
+    },
+    {
+      "name": "ro.bootmode",
+      "value": "unknown"
+    },
+    {
+      "name": "ro.build.2ndbrand",
+      "value": "false"
+    },
+    {
+      "name": "ro.build.PDA",
+      "value": "G885FDXU4CTJ1"
+    },
+    {
+      "name": "ro.build.changelist",
+      "value": "18807659"
+    },
+    {
+      "name": "ro.build.characteristics",
+      "value": "nosdcard"
+    },
+    {
+      "name": "ro.build.date",
+      "value": "Tue Oct 20 12:17:32 KST 2020"
+    },
+    {
+      "name": "ro.build.date.utc",
+      "value": "1603163852"
+    },
+    {
+      "name": "ro.build.description",
+      "value": "astarqltedx-user 10 QP1A.190711.020 G885FDXU4CTJ1 release-keys"
+    },
+    {
+      "name": "ro.build.display.id",
+      "value": "QP1A.190711.020.G885FDXU4CTJ1"
+    },
+    {
+      "name": "ro.build.display_build_number",
+      "value": "true"
+    },
+    {
+      "name": "ro.build.fingerprint",
+      "value": "samsung/astarqltedx/astarqlte:10/QP1A.190711.020/G885FDXU4CTJ1:user/release-keys"
+    },
+    {
+      "name": "ro.build.flavor",
+      "value": "astarqltedx-user"
+    },
+    {
+      "name": "ro.build.host",
+      "value": "SWDH2813"
+    },
+    {
+      "name": "ro.build.id",
+      "value": "QP1A.190711.020"
+    },
+    {
+      "name": "ro.build.keys",
+      "value": "test-keys"
+    },
+    {
+      "name": "ro.build.official.release",
+      "value": "true"
+    },
+    {
+      "name": "ro.build.product",
+      "value": "astarqlte"
+    },
+    {
+      "name": "ro.build.selinux",
+      "value": "1"
+    },
+    {
+      "name": "ro.build.selinux.enforce",
+      "value": "1"
+    },
+    {
+      "name": "ro.build.sw_version",
+      "value": "G885FDXU4CTJ1"
+    },
+    {
+      "name": "ro.build.system_root_image",
+      "value": "false"
+    },
+    {
+      "name": "ro.build.tags",
+      "value": "release-keys"
+    },
+    {
+      "name": "ro.build.tf_modelnumber",
+      "value": "SM-G885F"
+    },
+    {
+      "name": "ro.build.type",
+      "value": "user"
+    },
+    {
+      "name": "ro.build.user",
+      "value": "dpi"
+    },
+    {
+      "name": "ro.build.version.all_codenames",
+      "value": "REL"
+    },
+    {
+      "name": "ro.build.version.codename",
+      "value": "REL"
+    },
+    {
+      "name": "ro.build.version.incremental",
+      "value": "G885FDXU4CTJ1"
+    },
+    {
+      "name": "ro.build.version.min_supported_target_sdk",
+      "value": "23"
+    },
+    {
+      "name": "ro.build.version.preview_sdk",
+      "value": "0"
+    },
+    {
+      "name": "ro.build.version.preview_sdk_fingerprint",
+      "value": "REL"
+    },
+    {
+      "name": "ro.build.version.release",
+      "value": "10"
+    },
+    {
+      "name": "ro.build.version.sdk",
+      "value": "29"
+    },
+    {
+      "name": "ro.build.version.security_index",
+      "value": "1"
+    },
+    {
+      "name": "ro.build.version.security_patch",
+      "value": "2020-09-01"
+    },
+    {
+      "name": "ro.build.version.sem",
+      "value": "2901"
+    },
+    {
+      "name": "ro.build.version.sep",
+      "value": "110000"
+    },
+    {
+      "name": "ro.carrier",
+      "value": "unknown"
+    },
+    {
+      "name": "ro.cfg.custom_sw_limit",
+      "value": "275"
+    },
+    {
+      "name": "ro.cfg.custom_tm_limit",
+      "value": "1000"
+    },
+    {
+      "name": "ro.cfg.dha_2ndprop_thMB",
+      "value": "4096"
+    },
+    {
+      "name": "ro.cfg.dha_cached_max",
+      "value": "22"
+    },
+    {
+      "name": "ro.cfg.dha_empty_max",
+      "value": "30"
+    },
+    {
+      "name": "ro.cfg.enable_reentry_lmk",
+      "value": "true"
+    },
+    {
+      "name": "ro.cfg.enable_upgrade_criadj",
+      "value": "false"
+    },
+    {
+      "name": "ro.cfg.enable_userspace_lmk",
+      "value": "true"
+    },
+    {
+      "name": "ro.cfg.freelimit_val",
+      "value": "11"
+    },
+    {
+      "name": "ro.cfg.kill_heaviest_task",
+      "value": "true"
+    },
+    {
+      "name": "ro.cfg.upgrade_pressure",
+      "value": "100"
+    },
+    {
+      "name": "ro.cfg.use_camera_boost",
+      "value": "true"
+    },
+    {
+      "name": "ro.com.google.clientidbase",
+      "value": "android-samsung-ss"
+    },
+    {
+      "name": "ro.com.google.clientidbase.ms",
+      "value": "android-samsung-ga-rev1"
+    },
+    {
+      "name": "ro.com.google.gmsversion",
+      "value": "10_202003"
+    },
+    {
+      "name": "ro.config.add_bonusEFK",
+      "value": "2"
+    },
+    {
+      "name": "ro.config.alarm_alert",
+      "value": "Morning_Glory.ogg"
+    },
+    {
+      "name": "ro.config.custom_sw_limit",
+      "value": "250"
+    },
+    {
+      "name": "ro.config.dha_cached_max",
+      "value": "12"
+    },
+    {
+      "name": "ro.config.dha_cached_min",
+      "value": "3"
+    },
+    {
+      "name": "ro.config.dha_empty_max",
+      "value": "24"
+    },
+    {
+      "name": "ro.config.dha_empty_min",
+      "value": "8"
+    },
+    {
+      "name": "ro.config.dha_lmk_scale",
+      "value": "0.382"
+    },
+    {
+      "name": "ro.config.dha_pwhl_key",
+      "value": "1544"
+    },
+    {
+      "name": "ro.config.dmverity",
+      "value": "G"
+    },
+    {
+      "name": "ro.config.enable_upgrade_criadj",
+      "value": "true"
+    },
+    {
+      "name": "ro.config.fha_enable",
+      "value": "true"
+    },
+    {
+      "name": "ro.config.freelimit_val",
+      "value": "12"
+    },
+    {
+      "name": "ro.config.iccc_version",
+      "value": "3.0"
+    },
+    {
+      "name": "ro.config.knox",
+      "value": "v30"
+    },
+    {
+      "name": "ro.config.knox.ucm",
+      "value": "1"
+    },
+    {
+      "name": "ro.config.media_sound",
+      "value": "Media_preview_Touch_the_light.ogg"
+    },
+    {
+      "name": "ro.config.notification_sound",
+      "value": "Skyline.ogg"
+    },
+    {
+      "name": "ro.config.notification_sound_2",
+      "value": "S_Charming_Bell.ogg"
+    },
+    {
+      "name": "ro.config.ringtone",
+      "value": "Over_the_Horizon.ogg"
+    },
+    {
+      "name": "ro.config.ringtone_2",
+      "value": "Basic_Bell.ogg"
+    },
+    {
+      "name": "ro.config.rm_preload_enabled",
+      "value": "1"
+    },
+    {
+      "name": "ro.config.tima",
+      "value": "1"
+    },
+    {
+      "name": "ro.config.timaversion",
+      "value": "3.0"
+    },
+    {
+      "name": "ro.config.timaversion_info",
+      "value": "Knox3.4_S.R."
+    },
+    {
+      "name": "ro.config.upgrade_pressure",
+      "value": "60"
+    },
+    {
+      "name": "ro.config.v_bonusEFK",
+      "value": "22528"
+    },
+    {
+      "name": "ro.control_privapp_permissions",
+      "value": "enforce"
+    },
+    {
+      "name": "ro.crypto.default.encrypted",
+      "value": "true"
+    },
+    {
+      "name": "ro.crypto.fde_algorithm",
+      "value": "AES-256-XTS"
+    },
+    {
+      "name": "ro.crypto.fs_crypto_blkdev",
+      "value": "/dev/block/dm-3"
+    },
+    {
+      "name": "ro.crypto.state",
+      "value": "encrypted"
+    },
+    {
+      "name": "ro.crypto.type",
+      "value": "block"
+    },
+    {
+      "name": "ro.csc.country_code",
+      "value": "SINGAPORE"
+    },
+    {
+      "name": "ro.csc.countryiso_code",
+      "value": "SG"
+    },
+    {
+      "name": "ro.csc.facebook.partnerid",
+      "value": "samsung:dec1cc9c-1497-4aab-b953-cee702c2a481"
+    },
+    {
+      "name": "ro.csc.omcnw_code",
+      "value": "SUP"
+    },
+    {
+      "name": "ro.csc.omcnw_code2",
+      "value": "SUP"
+    },
+    {
+      "name": "ro.csc.sales_code",
+      "value": "SUP"
+    },
+    {
+      "name": "ro.dalvik.vm.native.bridge",
+      "value": "0"
+    },
+    {
+      "name": "ro.debuggable",
+      "value": "0"
+    },
+    {
+      "name": "ro.frp.pst",
+      "value": "/dev/block/persistent"
+    },
+    {
+      "name": "ro.hardware",
+      "value": "qcom"
+    },
+    {
+      "name": "ro.hardware.chipname",
+      "value": "SDM660"
+    },
+    {
+      "name": "ro.hardware.egl",
+      "value": "adreno"
+    },
+    {
+      "name": "ro.hardware.gatekeeper",
+      "value": "mdfpp"
+    },
+    {
+      "name": "ro.hardware.keystore",
+      "value": "mdfpp"
+    },
+    {
+      "name": "ro.hardware.nfc_nci",
+      "value": "nqx.default"
+    },
+    {
+      "name": "ro.hardware.vulkan",
+      "value": "adreno"
+    },
+    {
+      "name": "ro.hwui.drop_shadow_cache_size",
+      "value": "6"
+    },
+    {
+      "name": "ro.hwui.gradient_cache_size",
+      "value": "1"
+    },
+    {
+      "name": "ro.hwui.layer_cache_size",
+      "value": "48"
+    },
+    {
+      "name": "ro.hwui.path_cache_size",
+      "value": "32"
+    },
+    {
+      "name": "ro.hwui.r_buffer_cache_size",
+      "value": "8"
+    },
+    {
+      "name": "ro.hwui.text_large_cache_height",
+      "value": "2048"
+    },
+    {
+      "name": "ro.hwui.text_large_cache_width",
+      "value": "2048"
+    },
+    {
+      "name": "ro.hwui.text_small_cache_height",
+      "value": "1024"
+    },
+    {
+      "name": "ro.hwui.text_small_cache_width",
+      "value": "1024"
+    },
+    {
+      "name": "ro.hwui.texture_cache_flushrate",
+      "value": "0.4"
+    },
+    {
+      "name": "ro.hwui.texture_cache_size",
+      "value": "72"
+    },
+    {
+      "name": "ro.iorapd.enable",
+      "value": "false"
+    },
+    {
+      "name": "ro.kernel.qemu",
+      "value": "0"
+    },
+    {
+      "name": "ro.logd.auditd",
+      "value": "false"
+    },
+    {
+      "name": "ro.logd.size.stats",
+      "value": "64K"
+    },
+    {
+      "name": "ro.multisim.simslotcount",
+      "value": "2"
+    },
+    {
+      "name": "ro.netflix.bsp_rev",
+      "value": "Q660-13149-1"
+    },
+    {
+      "name": "ro.nfc.port",
+      "value": "I2C"
+    },
+    {
+      "name": "ro.oem.key1",
+      "value": "SUP"
+    },
+    {
+      "name": "ro.oem_unlock_supported",
+      "value": "1"
+    },
+    {
+      "name": "ro.omc.build.id",
+      "value": "35225407"
+    },
+    {
+      "name": "ro.omc.build.version",
+      "value": "G885FOLM4CTJ1"
+    },
+    {
+      "name": "ro.omc.changetype",
+      "value": "DATA_RESET_ON,TRUE"
+    },
+    {
+      "name": "ro.omc.disabler",
+      "value": "FALSE"
+    },
+    {
+      "name": "ro.omc.img_mount",
+      "value": "0"
+    },
+    {
+      "name": "ro.opa.eligible_device",
+      "value": "true"
+    },
+    {
+      "name": "ro.opengles.version",
+      "value": "196610"
+    },
+    {
+      "name": "ro.postinstall.fstab.prefix",
+      "value": "/system"
+    },
+    {
+      "name": "ro.product.board",
+      "value": "sdm660"
+    },
+    {
+      "name": "ro.product.brand",
+      "value": "samsung"
+    },
+    {
+      "name": "ro.product.cpu.abi",
+      "value": "arm64-v8a"
+    },
+    {
+      "name": "ro.product.cpu.abilist",
+      "value": "arm64-v8a,armeabi-v7a,armeabi"
+    },
+    {
+      "name": "ro.product.cpu.abilist32",
+      "value": "armeabi-v7a,armeabi"
+    },
+    {
+      "name": "ro.product.cpu.abilist64",
+      "value": "arm64-v8a"
+    },
+    {
+      "name": "ro.product.device",
+      "value": "astarqlte"
+    },
+    {
+      "name": "ro.product.first_api_level",
+      "value": "26"
+    },
+    {
+      "name": "ro.product.locale",
+      "value": "en-GB"
+    },
+    {
+      "name": "ro.product.manufacturer",
+      "value": "samsung"
+    },
+    {
+      "name": "ro.product.model",
+      "value": "SM-G885F"
+    },
+    {
+      "name": "ro.product.name",
+      "value": "astarqltedx"
+    },
+    {
+      "name": "ro.product.system.brand",
+      "value": "samsung"
+    },
+    {
+      "name": "ro.product.vendor.brand",
+      "value": "samsung"
+    },
+    {
+      "name": "ro.product.vendor.device",
+      "value": "astarqlte"
+    },
+    {
+      "name": "ro.product.vendor.manufacturer",
+      "value": "samsung"
+    },
+    {
+      "name": "ro.product.vendor.model",
+      "value": "SM-G885F"
+    },
+    {
+      "name": "ro.product.vendor.name",
+      "value": "astarqltedx"
+    },
+    {
+      "name": "ro.product_ship",
+      "value": "true"
+    },
+    {
+      "name": "ro.property_service.version",
+      "value": "2"
+    },
+    {
+      "name": "ro.qualcomm.cabl",
+      "value": "2"
+    },
+    {
+      "name": "ro.radio.noril",
+      "value": "no"
+    },
+    {
+      "name": "ro.revision",
+      "value": "7"
+    },
+    {
+      "name": "ro.ril.def_network_after_check_tdscdma",
+      "value": "9"
+    },
+    {
+      "name": "ro.ril.support_cdma",
+      "value": "false"
+    },
+    {
+      "name": "ro.ril.svdo",
+      "value": "false"
+    },
+    {
+      "name": "ro.ril.svlte1x",
+      "value": "false"
+    },
+    {
+      "name": "ro.secure",
+      "value": "1"
+    },
+    {
+      "name": "ro.security.cass.feature",
+      "value": "1"
+    },
+    {
+      "name": "ro.security.ese.cosname",
+      "value": "JCOP4.0_0050534A"
+    },
+    {
+      "name": "ro.security.esest",
+      "value": "emptyempty"
+    },
+    {
+      "name": "ro.security.keystore.keytype",
+      "value": "sak,gak"
+    },
+    {
+      "name": "ro.security.reactive.version",
+      "value": "2.0.12"
+    },
+    {
+      "name": "ro.security.vpnpp.release",
+      "value": "3.0"
+    },
+    {
+      "name": "ro.security.vpnpp.ver",
+      "value": "2.1"
+    },
+    {
+      "name": "ro.setupwizard.mode",
+      "value": "OPTIONAL"
+    },
+    {
+      "name": "ro.setupwizard.rotation_locked",
+      "value": "false"
+    },
+    {
+      "name": "ro.setupwizard.wifi_on_exit",
+      "value": "false"
+    },
+    {
+      "name": "ro.sf.lcd_density",
+      "value": "420"
+    },
+    {
+      "name": "ro.simbased.changetype",
+      "value": "NO_DFLT_CSC,OMC"
+    },
+    {
+      "name": "ro.sts.property",
+      "value": "FALSE"
+    },
+    {
+      "name": "ro.supportmodel.mptcp",
+      "value": "1"
+    },
+    {
+      "name": "ro.system.build.date",
+      "value": "Tue Oct 20 12:17:32 KST 2020"
+    },
+    {
+      "name": "ro.system.build.date.utc",
+      "value": "1603163852"
+    },
+    {
+      "name": "ro.system.build.fingerprint",
+      "value": "samsung/astarqltedx/astarqlte:10/QP1A.190711.020/G885FDXU4CTJ1:user/release-keys"
+    },
+    {
+      "name": "ro.system.build.id",
+      "value": "QP1A.190711.020"
+    },
+    {
+      "name": "ro.system.build.tags",
+      "value": "release-keys"
+    },
+    {
+      "name": "ro.system.build.type",
+      "value": "user"
+    },
+    {
+      "name": "ro.system.build.version.incremental",
+      "value": "G885FDXU4CTJ1"
+    },
+    {
+      "name": "ro.system.build.version.release",
+      "value": "10"
+    },
+    {
+      "name": "ro.system.build.version.sdk",
+      "value": "29"
+    },
+    {
+      "name": "ro.system.build.version.sehi",
+      "value": "2901"
+    },
+    {
+      "name": "ro.telephony.call_ring.multiple",
+      "value": "false"
+    },
+    {
+      "name": "ro.telephony.default_cdma_sub",
+      "value": "0"
+    },
+    {
+      "name": "ro.telephony.default_network",
+      "value": "9"
+    },
+    {
+      "name": "ro.telephony.iwlan_operation_mode",
+      "value": "legacy"
+    },
+    {
+      "name": "ro.treble.enabled",
+      "value": "true"
+    },
+    {
+      "name": "ro.user_trial",
+      "value": "FALSE"
+    },
+    {
+      "name": "ro.vendor.build.date",
+      "value": "Tue Oct 20 12:17:32 KST 2020"
+    },
+    {
+      "name": "ro.vendor.build.date.utc",
+      "value": "1603163852"
+    },
+    {
+      "name": "ro.vendor.build.fingerprint",
+      "value": "samsung/astarqltedx/astarqlte:10/QP1A.190711.020/G885FDXU4CTJ1:user/release-keys"
+    },
+    {
+      "name": "ro.vendor.build.security_patch",
+      "value": "2020-09-01"
+    },
+    {
+      "name": "ro.vendor.multisim.simslotcount",
+      "value": "2"
+    },
+    {
+      "name": "ro.vendor.qti.va_aosp.support",
+      "value": "1"
+    },
+    {
+      "name": "ro.vendor.radio.default_network",
+      "value": "9"
+    },
+    {
+      "name": "ro.vendor.ril.mbn_copy_completed",
+      "value": "1"
+    },
+    {
+      "name": "ro.vndk.version",
+      "value": "29"
+    },
+    {
+      "name": "ro.zygote",
+      "value": "zygote64_32"
+    }
+  ]
+}

@@ -4,5 +4,6 @@ var router = express.Router();
 
 // => router statistical
 router.get('/', statisticalController.statistical_index);
+router.get('/read_dir', statisticalController.read_dir);
 
 module.exports = router;
