@@ -18,19 +18,22 @@ const xml_file = (directory, submission_id) => {
   const list_path = walk(directoryPath);
   const list_file_xml = list_path.filter((x) => { return x.includes(".xml") });
 
-  var xx = [];
-  list_file_xml.forEach((file) => {
-    const content = iconvlite.decode(fs.readFileSync(file), "UTF-16");
+  var re = [];
+  list_file_xml.forEach((file_path) => {
+    const content = iconvlite.decode(fs.readFileSync(file_path), "UTF-8");
     xml2js.parseString(content, (err, result) => {
       if (err) {
         throw err;
       }
       if (result != null) {
-        xx.push(result);
+        re.push({
+          data: result,
+          file_name: path.parse(file_path).name
+        })
       }
     });
   });
-  return xx;
+  return re;
 }
 
 var walk = function (dir) {

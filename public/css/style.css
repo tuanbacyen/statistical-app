@@ -36,3 +36,7 @@
 .form-new {
   border: 1px greenyellow solid;
 }
+
+#tbl_body_sdt tr td p {
+  margin-bottom: 0px;
+}
