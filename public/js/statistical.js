@@ -11,12 +11,12 @@ function readDir() {
     },
     type: "post",
     success: function (result) {
-      compare_sdt(result.data);
+      compare_cs(result.data);
     }
   });
 }
 
-function compare_sdt(data) {
+function compare_cs(data) {
   $("#tbl_body_sdt").html("");
   data.forEach((item, i) => {
     render_record_sdt(item, i);

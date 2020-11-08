@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 
-var sdtSchema = new mongoose.Schema({
+var countrySaleSchema = new mongoose.Schema({
   country: {
     type: String,
     required: 'Field required!'
@@ -13,4 +13,4 @@ var sdtSchema = new mongoose.Schema({
   { timestamps: { createdAt: 'created_at', updatedAt: "updated_at" } }
 );
 
-mongoose.model('Sdt', sdtSchema);
+mongoose.model('CountrySale', countrySaleSchema);

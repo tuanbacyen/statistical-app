@@ -1,24 +1,24 @@
 var mongoose = require("mongoose");
 const ReadDir = require('../services/reading_file');
-const Sdt = mongoose.model('Sdt');
+const CountrySale = mongoose.model('CountrySale');
 const Cts = mongoose.model('Cts');
 
 const statistical_index = async (req, res) => {
-  const sdt_checks = await Sdt.find().select('country sale_code');
-  const data_sdt = sdt_checks.map(function (x) { return { country: x.country.toUpperCase(), sale_code: x.sale_code.toUpperCase() }; });
-  res.render("statistical/index", { sdt_checks: data_sdt });
+  const cs_checks = await CountrySale.find().select('country sale_code');
+  const data_cs = cs_checks.map(function (x) { return { country: x.country.toUpperCase(), sale_code: x.sale_code.toUpperCase() }; });
+  res.render("statistical/index", { cs_checks: data_cs });
 }
 
 const read_dir = (req, res) => {
   let data = [];
-  const data_sdt_xml = ReadDir.xml_file(req.body.directory, req.body.submission_id);
-  data_sdt_xml.forEach((file_data) => {
-    data.push(get_sdt(file_data));
+  const data_cs_xml = ReadDir.xml_file(req.body.directory, req.body.submission_id);
+  data_cs_xml.forEach((file_data) => {
+    data.push(get_cs(file_data));
   });
   res.json({ "data": data });
 }
 
-function get_sdt(file_data) {
+function get_cs(file_data) {
   // gms app version
   let file_name = file_data.file_name;
   const origin_data = file_data.data.SDTResult;

@@ -1,10 +1,10 @@
 <script>
   const COUNTRY_SALE_CORRECT = [];
 </script>
-<% sdt_checks.forEach((sdt) => { %>
+<% cs_checks.forEach((cs) => { %>
 <script>
-  delete JSON.parse('<%- JSON.stringify(sdt) %>')._id;
-  COUNTRY_SALE_CORRECT.push(JSON.parse('<%- JSON.stringify(sdt) %>'));
+  delete JSON.parse('<%- JSON.stringify(cs) %>')._id;
+  COUNTRY_SALE_CORRECT.push(JSON.parse('<%- JSON.stringify(cs) %>'));
 </script>
 <% }); %>
 <div class="container main-view">

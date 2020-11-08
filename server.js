@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
 
 const statisticalRoutes = require('./routes/statisticalRoutes');
-const sdtRoutes = require('./routes/sdtRoutes');
+const countrySaleRoutes = require('./routes/countrySaleRoutes');
 
 var app = express();
 
@@ -26,4 +26,4 @@ app.listen(port, () => {
 });
 
 app.use('/', statisticalRoutes);
-app.use('/sdt', sdtRoutes);
+app.use('/country_sale', countrySaleRoutes);

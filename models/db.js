@@ -11,5 +11,5 @@ mongoose.connect(process.env.MONGODB_URI || URL_MONGO_LOCALE, { useNewUrlParser:
 
 mongoose.set('useFindAndModify', false);
 
-require('./sdt.model');
+require('./country_sale.model');
 require('./cts.model');
