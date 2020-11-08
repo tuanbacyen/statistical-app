@@ -2,6 +2,8 @@ const path = require('path');
 const fs = require('fs');
 const xml2js = require('xml2js');
 const iconvlite = require("iconv-lite");
+const excelToJson = require('convert-excel-to-json');
+const { log } = require('console');
 
 
 const json_file = () => {
@@ -36,6 +38,20 @@ const xml_file = (directory, submission_id) => {
   return re;
 }
 
+const csv_file = (path, sheet, columnToKey) => {
+  const excelData = excelToJson({
+    sourceFile: path,
+    sheets: [{
+      name: sheet,
+      header: {
+        rows: 1
+      },
+      columnToKey: columnToKey
+    }]
+  });
+  return excelData[sheet];
+}
+
 var walk = function (dir) {
   var results = [];
   var list = fs.readdirSync(dir);
@@ -53,5 +69,6 @@ var walk = function (dir) {
 
 module.exports = {
   json_file,
-  xml_file
+  xml_file,
+  csv_file,
 };

@@ -3,6 +3,7 @@ const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const path = require('path');
 const bodyParser = require('body-parser');
+const fileUpload = require('express-fileupload');
 
 const statisticalRoutes = require('./routes/statisticalRoutes');
 const sdtRoutes = require('./routes/sdtRoutes');
@@ -11,6 +12,7 @@ var app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(fileUpload({ useTempFiles: true }));
 app.use(expressLayouts);
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, '/views/'));

@@ -9,5 +9,8 @@ router.get('/edit/:id', sdtController.sdt_edit);
 router.post('/create', sdtController.sdt_create);
 router.post('/update', sdtController.sdt_update);
 router.get('/delete/:id', sdtController.sdt_delete);
+router.get('/delete', sdtController.sdt_delete_all);
+router.get('/import', sdtController.sdt_import);
+router.post('/create_with_file', sdtController.sdt_create_with_file);
 
 module.exports = router;
