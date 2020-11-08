@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-const ReadDir = require('../services/reading_file');
+const { xml_file } = require('../services/reading_file');
 const CountrySale = mongoose.model('CountrySale');
 const Cts = mongoose.model('Cts');
 
@@ -11,7 +11,7 @@ const statistical_index = async (req, res) => {
 
 const read_dir = (req, res) => {
   let data = [];
-  const data_cs_xml = ReadDir.xml_file(req.body.directory, req.body.submission_id);
+  const data_cs_xml = xml_file(req.body.directory, req.body.submission_id);
   data_cs_xml.forEach((file_data) => {
     data.push(get_cs(file_data));
   });

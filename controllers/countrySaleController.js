@@ -87,8 +87,8 @@ const cs_create_with_file = (req, res) => {
   const { tempFilePath } = req.files.cs_file;
   const cToK = { A: 'country', B: 'sale_code' };
   const data_csv = ReadDir.csv_file(tempFilePath, "Sheet1", cToK);
+  fs.unlinkSync(tempFilePath);
   CountrySale.insertMany(data_csv, function (error, docs) {
-    fs.unlinkSync(tempFilePath);
     if (error) {
       console.log('Save error: ', error);
       res.redirect('/country_sale/import', { flash: `Have a error ${error.toString()}` });

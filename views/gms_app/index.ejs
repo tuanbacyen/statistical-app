@@ -1,0 +1,34 @@
+<div class="col-md-12 offset-md-0">
+  <h3>GMS-APP -> COUNT: <%= list.length %></h3>
+  <table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+      <tr class="d-flex">
+        <th class="col-4">APK</th>
+        <th class="col-3">Packages</th>
+        <th class="col-1">Code Name</th>
+        <th class="col-2">Code Cersion</th>
+        <th class="col-2 text-center">
+          <a class="btn btn-success" href="/gms_app/new"><i class="fa fa-plus"></i></a>
+          <a class="btn btn-success" href="/gms_app/import"><i class="fa fa-upload"></i></a>
+          <a href="/gms_app/delete" class="btn btn-success" onclick="return confirm('You want remove all record ?');"><i
+              class="fa fa-trash-o" aria-hidden="true"></i></a>
+      </tr>
+    </thead>
+    <tbody>
+      <% list.forEach((gms_app) => { %>
+      <tr class="d-flex">
+        <td class="col-4" style="word-wrap: break-word"><%= gms_app.apk %></td>
+        <td class="col-3" style="word-wrap: break-word"><%= gms_app.packages %></td>
+        <td class="col-1"><%= gms_app.code_name %></td>
+        <td class="col-2"><%= gms_app.code_version %></td>
+        <td class="col-2 text-center">
+          <a href="/gms_app/edit/<%= gms_app._id %>"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+          <a href="/gms_app/delete/<%= gms_app._id %>"
+            onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg"
+              aria-hidden="true"></i></a>
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>
