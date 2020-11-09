@@ -1,10 +1,17 @@
 <script>
   const COUNTRY_SALE_CORRECT = [];
+  const GMS_APP_CORRECT = [];
 </script>
 <% cs_checks.forEach((cs) => { %>
 <script>
   delete JSON.parse('<%- JSON.stringify(cs) %>')._id;
   COUNTRY_SALE_CORRECT.push(JSON.parse('<%- JSON.stringify(cs) %>'));
+</script>
+<% }); %>
+<% ga_checks.forEach((ga) => { %>
+<script>
+  delete JSON.parse('<%- JSON.stringify(ga) %>')._id;
+  GMS_APP_CORRECT.push(JSON.parse('<%- JSON.stringify(ga) %>'));
 </script>
 <% }); %>
 <div class="container main-view">
