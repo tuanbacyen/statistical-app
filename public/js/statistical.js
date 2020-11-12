@@ -1,5 +1,6 @@
 $(document).ready(function () {
   $('body').on('click', '#btn_statistical', readDir);
+  $('body').on('click', '#btn_reset', resetView)
 });
 
 function readDir() {
@@ -14,6 +15,10 @@ function readDir() {
       render_td(result.data);
     }
   });
+}
+
+function resetView() {
+  $("#tbl_body_sdt").html("");
 }
 
 function render_td(data) {
@@ -68,7 +73,7 @@ function gms_app_check(gms_apps) {
   });
 
   if (wrong_gms.length <= 0) {
-    return `<p class="text-primary">Gms apps versions: correct</p>`;
+    return `<p class="text-primary"><strong>Gms apps versions:</strong> correct</p>`;
   } else {
     let wrong = "";
     wrong_gms.forEach((w) => {

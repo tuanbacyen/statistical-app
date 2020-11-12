@@ -27,6 +27,8 @@
 }
 
 .body-review {
+  max-height: 700px;
+  overflow: scroll;
 }
 
 .nav-pagination {
