@@ -13,7 +13,7 @@ const statistical_index = async (req, res) => {
 
 const read_dir = (req, res) => {
   let data = [];
-  const data_cs_xml = xml_file(req.body.directory, req.body.submission_id);
+  const data_cs_xml = xml_file(req.body.directory);
   data_cs_xml.forEach((file_data) => {
     data.push(get_cs(file_data));
   });

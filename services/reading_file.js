@@ -15,8 +15,8 @@ const json_file = () => {
   return data;
 }
 
-const xml_file = (directory, submission_id) => {
-  const directoryPath = path.join(directory, submission_id);
+const xml_file = (directory) => {
+  const directoryPath = path.join(directory, "");
   const list_path = walk(directoryPath);
   const list_file_xml = list_path.filter((x) => { return x.includes(".xml") });
 

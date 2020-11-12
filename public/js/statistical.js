@@ -7,8 +7,7 @@ function readDir() {
   $.ajax({
     url: "/read_dir",
     data: {
-      directory: $("#path_folder").val(),
-      submission_id: $("#submission_id").val()
+      directory: $("#path_folder").val()
     },
     type: "post",
     success: function (result) {
