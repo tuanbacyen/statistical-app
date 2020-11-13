@@ -15,12 +15,21 @@ function showTab() {
   $(`#tab_${ACTIVE_TAB}`).addClass('btn-success');
 }
 
+function dataTab(check_tab) {
+  if (check_tab) {
+    $('.text-primary').show();
+  } else {
+    $('.text-primary').hide();
+  }
+}
+
 function tabSelect() {
   const index_tab = parseInt($(this).data('tab'));
   if (index_tab === ACTIVE_TAB)
     return;
   ACTIVE_TAB = index_tab;
   showTab();
+  dataTab(ACTIVE_TAB === 1);
 }
 
 function setCookieFolderPath() {
