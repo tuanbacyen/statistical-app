@@ -36,12 +36,21 @@ function render_record_sdt(data_item, index) {
         <p class="text-primary"><strong>Reslut: </strong>${data_item.file_name}</p>
         ${country_sale_check(data_item.country_sale)}
         <p class="text-primary"><strong>Fingerprint: </strong>${data_item.fingerprint}</p>
-        <p class="text-primary"><strong>Gms Version: </strong>${data_item.gms_version}</p>
+        ${gms_version(data_item.gms_version)}
         ${gms_app_check(data_item.gms_apps)}
         <p class="text-primary"><strong>TSS Model: </strong>${data_item.tss_model}</p>
       </td>
     </tr>`
   );
+}
+
+function gms_version(gv) {
+  if (GMS_VERSION === gv) {
+    return `<p class="text-primary"><strong>Gms Version: </strong>${gv}</p>`;
+  } else {
+    return `<p class="text-danger"><strong>Incorrect version</strong>: ${gv}</p>
+            <p class="text-danger"><strong>expected: </strong>${GMS_VERSION}</p>`;
+  }
 }
 
 function country_sale_check(country_sale) {
@@ -50,8 +59,8 @@ function country_sale_check(country_sale) {
   if (cs_with_key.length === 0) {
     return `<p class="text-danger">Undefined sale_code ${country_sale.sale_code} from database</p>`;
   } else if (x <= 0) {
-    return `<p class="text-danger">Incorrect mapping ${country_sale.sale_code} with ${country_sale.country}</p>
-    <p class="text-danger">Expected: ${country_sale.sale_code} should be mapped with ${cs_with_key[0].country}</p>`
+    return `<p class="text-danger"><strong>Incorrect mapping: </strong> ${country_sale.sale_code} with ${country_sale.country}</p>
+    <p class="text-danger"><strong>Expected: </strong> ${country_sale.sale_code} should be mapped with ${cs_with_key[0].country}</p>`
   } else {
     return `<p class="text-primary"><strong>Carrier: </strong>${country_sale.sale_code}</p>
         <p class="text-primary"><strong>Country: </strong>${country_sale.country}</p>`;
@@ -76,8 +85,8 @@ function gms_app_check(gms_apps) {
   } else {
     let wrong = "";
     wrong_gms.forEach((w) => {
-      wrong += `<p class="text-danger">Incorrect ${w.origin.name} version: ${w.origin.value}</p>
-                <p class="text-danger">expected ${w.correct}</p>`
+      wrong += `<p class="text-danger"><strong>Incorrect: </strong> ${w.origin.name} version: ${w.origin.value}</p>
+                <p class="text-danger"><strong>expected: </strong> ${w.correct}</p>`
     });
     return wrong;
   }

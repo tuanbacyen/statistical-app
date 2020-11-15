@@ -34,8 +34,8 @@ const cs_edit = (req, res) => {
 
 const cs_create = (req, res) => {
   var cs = new CountrySale();
-  cs.country = req.body.country
-  cs.sale_code = req.body.sale_code
+  cs.country = req.body.country.trim();
+  cs.sale_code = req.body.sale_code.trim();
 
   cs.save((error, doc) => {
     if (error) {

@@ -8,6 +8,7 @@ const fileUpload = require('express-fileupload');
 const statisticalRoutes = require('./routes/statisticalRoutes');
 const countrySaleRoutes = require('./routes/countrySaleRoutes');
 const gmsAppRoutes = require('./routes/gmsAppRoutes');
+const gmsVersionRoutes = require('./routes/gmsVersionRoutes');
 
 var app = express();
 
@@ -29,3 +30,4 @@ app.listen(port, () => {
 app.use('/', statisticalRoutes);
 app.use('/country_sale', countrySaleRoutes);
 app.use('/gms_app', gmsAppRoutes);
+app.use('/gms_version', gmsVersionRoutes);

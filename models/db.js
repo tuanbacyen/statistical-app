@@ -13,4 +13,4 @@ mongoose.set('useFindAndModify', false);
 
 require('./country_sale.model');
 require('./gms_app.model')
-require('./cts.model');
+require('./gms_version.model');

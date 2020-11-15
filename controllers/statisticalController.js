@@ -2,13 +2,15 @@ var mongoose = require("mongoose");
 const { xml_file } = require('../services/reading_file');
 const CountrySale = mongoose.model('CountrySale');
 const GmsApp = mongoose.model('GmsApp');
+const GmsVersion = mongoose.model('GmsVersion');
 
 const statistical_index = async (req, res) => {
+  const data_gv = await GmsVersion.findOne().sort({ created_at: -1 }).select('version');
   const cs_checks = await CountrySale.find().select('country sale_code');
   const ga_checks = await GmsApp.find().select('packages full_code');
   const data_cs = cs_checks.map(function (x) { return { country: x.country.toUpperCase(), sale_code: x.sale_code.toUpperCase() }; });
   const data_ga = ga_checks.map(function (x) { return { packages: x.packages.toLowerCase(), full_code: x.full_code.toLowerCase() }; });
-  res.render("statistical/index", { cs_checks: data_cs, ga_checks: data_ga });
+  res.render("statistical/index", { data_gv: data_gv, cs_checks: data_cs, ga_checks: data_ga });
 }
 
 const read_dir = (req, res) => {
@@ -42,10 +44,9 @@ function get_cs(file_data) {
     }
   });
   gas.Test.forEach((ga) => {
-    gms_apps.push({
-      name: ga.$.name,
-      value: ga.$.value
-    })
+    if (ga.$.value != -1) {
+      gms_apps.push({ name: ga.$.name, value: ga.$.value });
+    }
   });
   return {
     country_sale: country_sale,
