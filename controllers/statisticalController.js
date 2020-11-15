@@ -45,7 +45,7 @@ function get_cs(file_data) {
   });
   gas.Test.forEach((ga) => {
     if (ga.$.value != -1) {
-      gms_apps.push({ name: ga.$.name, value: ga.$.value });
+      gms_apps.push({ name: ga.$.name, value: ga.$.value.split(" ")[0] });
     }
   });
   return {
