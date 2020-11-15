@@ -31,8 +31,8 @@ function get_cs(file_data) {
   let country_sale = {};
   let gms_version = "";
   let gms_apps = [];
-  const gps = origin_data.TestPackage.filter((i) => { return i.$.name === "Getprop"; })[0];
-  const gas = origin_data.TestPackage.filter((i) => { return i.$.name === "gms"; })[0];
+  const gps = origin_data.TestPackage.filter((i) => { return i.$.name.toLowerCase() === "getprop"; })[0];
+  const gas = origin_data.TestPackage.filter((i) => { return i.$.name.toLowerCase() === "gms"; })[0];
   gps.Test.forEach((gp) => {
     let key_name = gp.$.name;
     if (key_name.includes("ro.csc.country_code")) {

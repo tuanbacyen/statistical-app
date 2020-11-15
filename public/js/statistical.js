@@ -54,8 +54,8 @@ function gms_version(gv) {
 }
 
 function country_sale_check(country_sale) {
-  const cs_with_key = COUNTRY_SALE_CORRECT.filter((x) => { return x.sale_code === country_sale.sale_code; });
-  const x = cs_with_key.filter((x) => { return x.country === country_sale.country }).length;
+  const cs_with_key = COUNTRY_SALE_CORRECT.filter((x) => { return x.sale_code.toLowerCase() === country_sale.sale_code.toLowerCase(); });
+  const x = cs_with_key.filter((x) => { return x.country.toLowerCase() === country_sale.country.toLowerCase() }).length;
   if (cs_with_key.length === 0) {
     return `<p class="text-danger">Undefined sale_code ${country_sale.sale_code} from database</p>`;
   } else if (x <= 0) {
@@ -70,8 +70,8 @@ function country_sale_check(country_sale) {
 function gms_app_check(gms_apps) {
   let wrong_gms = [];
   gms_apps.forEach((ga) => {
-    const gas = GMS_APP_CORRECT.filter((x) => { return x.packages === ga.name; });
-    const gas_with_name = gas.filter((x) => { return x.full_code === ga.value; });
+    const gas = GMS_APP_CORRECT.filter((x) => { return x.packages.toLowerCase() === ga.name.toLowerCase(); });
+    const gas_with_name = gas.filter((x) => { return x.full_code.toLowerCase() === ga.value.toLowerCase(); });
     if (gas.length > 0 && gas_with_name.length <= 0) {
       wrong_gms.push({
         origin: ga,
