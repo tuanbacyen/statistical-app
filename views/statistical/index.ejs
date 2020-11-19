@@ -1,7 +1,8 @@
 <script>
-  const GMS_VERSION = "<%= data_gv.version %>";
-  const COUNTRY_SALE_CORRECT = [];
-  const GMS_APP_CORRECT = [];
+  var GMS_VERSION = "<%= data_gv.version %>";
+  var COUNTRY_SALE_CORRECT = [];
+  var GMS_APP_CORRECT = [];
+  var DATA = [];
 </script>
 <% cs_checks.forEach((cs) => { %>
 <script>
@@ -15,15 +16,28 @@
   GMS_APP_CORRECT.push(JSON.parse('<%- JSON.stringify(ga) %>'));
 </script>
 <% }); %>
+<% data.forEach((d) => { %>
+<script>
+  DATA.push(JSON.parse('<%- JSON.stringify(d) %>'));
+</script>
+<% }); %>
 <div class="container main-view">
   <div class="row body-main">
     <div class="col-md-4 body-left">
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="file_select">Path folder</label>
         <input type="text" class="form-control" id="path_folder" placeholder="C:/Users/user/Downloads">
       </div>
       <button class="btn btn-success" type="button" id="btn_reset">Reset</button>
-      <button class="btn btn-primary" type="button" id="btn_statistical">Submit</button>
+      <button class="btn btn-primary" type="button" id="btn_statistical">Submit</button> -->
+      <form action="/check" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="fileeee">Chọn folder cần check</label>
+          <input type="file" class="form-control-file" id="fileeee" name="files_folder" required webkitdirectory
+            mozdirectory>
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </form>
     </div>
     <div class="col-md-8 body-right">
       <div class="header-review">

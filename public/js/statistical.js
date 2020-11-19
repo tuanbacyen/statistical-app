@@ -1,6 +1,10 @@
 $(document).ready(function () {
   $('body').on('click', '#btn_statistical', readDir);
   $('body').on('click', '#btn_reset', resetView)
+  if (DATA != []) {
+    render_td(DATA);
+    window.history.pushState('Check', 'Check', window.location.origin);
+  }
 });
 
 function readDir() {

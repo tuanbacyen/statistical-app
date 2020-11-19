@@ -38,6 +38,25 @@ const xml_file = (directory) => {
   return re;
 }
 
+const xml_file_with_list_path = (list_file_xml) => {
+  var re = [];
+  list_file_xml.forEach((file_path) => {
+    const content = iconvlite.decode(fs.readFileSync(file_path), "UTF-8");
+    xml2js.parseString(content, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      if (result != null) {
+        re.push({
+          data: result,
+          file_name: path.parse(file_path).name
+        })
+      }
+    });
+  });
+  return re;
+}
+
 const csv_file = (path, sheet, columnToKey) => {
   const excelData = excelToJson({
     sourceFile: path,
@@ -71,4 +90,5 @@ module.exports = {
   json_file,
   xml_file,
   csv_file,
+  xml_file_with_list_path,
 };
