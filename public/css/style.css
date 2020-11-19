@@ -39,6 +39,12 @@
   border: 1px greenyellow solid;
 }
 
+.form-login {
+  background-color: rgb(182, 252, 194);
+  margin-top: 25px;
+  padding: 10px;
+}
+
 #tbl_body_sdt tr td p {
   margin-bottom: 0px;
 }

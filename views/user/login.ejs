@@ -1,6 +1,8 @@
-<div class="col-md-4 offset-md-4" style="background-color: rgb(182, 252, 194);margin-top: 25px;padding:20px;">
+<div class="col-md-4 offset-md-4 form-login">
+  <% if(locals.flash) { %>
   <span class="badge badge-danger"><%= flash %></span>
-  <form action="/user_login" method="POST" autocomplete="off">
+  <% } %>
+  <form action="/sign_in" method="POST" autocomplete="off">
     <div class="form-group">
       <label for="inputUsername">User name</label>
       <input type="text" name="username" class="form-control" id="inputUsername">
@@ -9,6 +11,6 @@
       <label for="inputPassword">Password</label>
       <input type="password" name="password" class="form-control" id="inputPassword">
     </div>
-    <button type="submit" class="btn btn-primary float-right">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
