@@ -18,7 +18,7 @@ const statistical_check = async (req, res) => {
     const data_ga = ga_checks.map(function (x) { return { packages: x.packages.toLowerCase(), full_code: x.full_code.toLowerCase() }; });
 
     let files = req.files.files_folder;
-    // if (!Array.isArray(files)) files = [files];
+    if (!Array.isArray(files)) files = [files];
 
     const list_file_xml = files.filter((x) => { return x.name.includes(".xml") }).map(f => f.tempFilePath);
     let data = [];
