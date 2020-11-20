@@ -22,19 +22,18 @@
 </script>
 <% }); %>
 <div class="container main-view">
+  <% if(locals.flash) { %>
+  <span class="badge badge-danger"><%= flash %></span>
+  <% } %>
   <div class="row body-main">
     <div class="col-md-4 body-left">
-      <!-- <div class="form-group">
-        <label for="file_select">Path folder</label>
-        <input type="text" class="form-control" id="path_folder" placeholder="C:/Users/user/Downloads">
-      </div>
-      <button class="btn btn-success" type="button" id="btn_reset">Reset</button>
-      <button class="btn btn-primary" type="button" id="btn_statistical">Submit</button> -->
       <form action="/check" method="POST" enctype="multipart/form-data">
         <div class="form-group">
           <label for="fileeee">Chọn folder cần check</label>
           <input type="file" class="form-control-file" id="fileeee" name="files_folder" required webkitdirectory
             mozdirectory>
+        </div>
+        <div class="form-group">
           <button class="btn btn-primary" type="submit">Submit</button>
         </div>
       </form>

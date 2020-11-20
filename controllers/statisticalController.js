@@ -4,37 +4,35 @@ const CountrySale = mongoose.model('CountrySale');
 const GmsApp = mongoose.model('GmsApp');
 const GmsVersion = mongoose.model('GmsVersion');
 const fs = require('fs');
-const { log } = require("console");
 
 const statistical_index = async (req, res) => {
-  // const data_gv = await GmsVersion.findOne().sort({ created_at: -1 }).select('version');
-  // const cs_checks = await CountrySale.find().select('country sale_code');
-  // const ga_checks = await GmsApp.find().select('packages full_code');
-  // const data_cs = cs_checks.map(function (x) { return { country: x.country.toUpperCase(), sale_code: x.sale_code.toUpperCase() }; });
-  // const data_ga = ga_checks.map(function (x) { return { packages: x.packages.toLowerCase(), full_code: x.full_code.toLowerCase() }; });
   res.render("statistical/index", { data: [], data_gv: [], cs_checks: [], ga_checks: [] });
 }
 
 const statistical_check = async (req, res) => {
-  const data_gv = await GmsVersion.findOne().sort({ created_at: -1 }).select('version');
-  const cs_checks = await CountrySale.find().select('country sale_code');
-  const ga_checks = await GmsApp.find().select('packages full_code');
-  const data_cs = cs_checks.map(function (x) { return { country: x.country.toUpperCase(), sale_code: x.sale_code.toUpperCase() }; });
-  const data_ga = ga_checks.map(function (x) { return { packages: x.packages.toLowerCase(), full_code: x.full_code.toLowerCase() }; });
+  try {
+    const data_gv = await GmsVersion.findOne().sort({ created_at: -1 }).select('version');
+    const cs_checks = await CountrySale.find().select('country sale_code');
+    const ga_checks = await GmsApp.find().select('packages full_code');
+    const data_cs = cs_checks.map(function (x) { return { country: x.country.toUpperCase(), sale_code: x.sale_code.toUpperCase() }; });
+    const data_ga = ga_checks.map(function (x) { return { packages: x.packages.toLowerCase(), full_code: x.full_code.toLowerCase() }; });
 
-  const files = req.files;
-  const list_file_xml = files.files_folder
-    .filter((x) => { return x.name.includes(".xml") })
-    .map(f => f.tempFilePath);
-  let data = [];
-  const data_cs_xml = xml_file_with_list_path(list_file_xml);
-  data_cs_xml.forEach((file_data) => {
-    data.push(get_cs(file_data));
-  });
-  files.files_folder.forEach((file) => {
-    fs.unlinkSync(file.tempFilePath);
-  });
-  res.render("statistical/index", { data: data, data_gv: data_gv, cs_checks: data_cs, ga_checks: data_ga });
+    let files = req.files.files_folder;
+    // if (!Array.isArray(files)) files = [files];
+
+    const list_file_xml = files.filter((x) => { return x.name.includes(".xml") }).map(f => f.tempFilePath);
+    let data = [];
+    const data_cs_xml = xml_file_with_list_path(list_file_xml);
+    data_cs_xml.forEach((file_data) => {
+      data.push(get_cs(file_data));
+    });
+    files.forEach((file) => {
+      fs.unlinkSync(file.tempFilePath);
+    });
+    res.render("statistical/index", { data: data, data_gv: data_gv, cs_checks: data_cs, ga_checks: data_ga });
+  } catch (error) {
+    res.render("statistical/index", { flash: "CÓ lỗi: " + error, data: [], data_gv: [], cs_checks: [], ga_checks: [] });
+  }
 }
 
 const read_dir = (req, res) => {

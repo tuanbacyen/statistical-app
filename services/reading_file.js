@@ -3,7 +3,6 @@ const fs = require('fs');
 const xml2js = require('xml2js');
 const iconvlite = require("iconv-lite");
 const excelToJson = require('convert-excel-to-json');
-const { log } = require('console');
 
 
 const json_file = () => {
