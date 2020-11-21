@@ -1,8 +1,8 @@
 <div class="col-md-4 offset-md-4 form-login">
-  <% if(locals.flash) { %>
-  <span class="badge badge-danger"><%= flash %></span>
+  <% if(messages.error) { %>
+  <h3><span class="badge badge-danger"><%= messages.error %></span></h3>
   <% } %>
-  <form action="/sign_in" method="POST" autocomplete="off">
+  <form action="/login" method="POST" autocomplete="on">
     <div class="form-group">
       <label for="inputUsername">User name</label>
       <input type="text" name="username" class="form-control" id="inputUsername">
