@@ -8,6 +8,7 @@ const login = async (req, res) => {
     console.log('create admin');
     var u = new User();
     u.username = 'admin';
+    u.role = 'admin';
     u.password = await bcrypt.hash('111111', 10);
     u.save();
   }

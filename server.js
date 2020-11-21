@@ -55,7 +55,7 @@ app.listen(port, () => {
 
 app.use('/', statisticalRoutes);
 app.use('/', authenticateRoutes);
-app.use('/users', userRoutes);
+app.use('/user', userRoutes);
 app.use('/country_sale', countrySaleRoutes);
 app.use('/gms_app', gmsAppRoutes);
 app.use('/gms_version', gmsVersionRoutes);
