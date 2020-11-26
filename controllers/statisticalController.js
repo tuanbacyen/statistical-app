@@ -20,11 +20,12 @@ const statistical_check = async (req, res) => {
     let files = req.files.files_folder;
     if (!Array.isArray(files)) files = [files];
 
-    const list_file_xml = files.filter((x) => { return x.name.includes(".xml") }).map(f => f.tempFilePath);
+    const list_file_xml = files.filter((x) => { return x.name.includes(".xml") }).map(f => [f.name, f.tempFilePath]);
     let data = [];
-    const data_cs_xml = xml_file_with_list_path(list_file_xml);
-    data_cs_xml.forEach((file_data) => {
-      data.push(get_cs(file_data));
+    const data_cs_xml = xml_file_with_list_path(list_file_xml.map(i => i[1]));
+    const origin_files = list_file_xml.map(i => i[0]);
+    data_cs_xml.forEach((file_data, index) => {
+      data.push(get_cs(file_data, origin_files[index]));
     });
     files.forEach((file) => {
       fs.unlinkSync(file.tempFilePath);
@@ -35,18 +36,18 @@ const statistical_check = async (req, res) => {
   }
 }
 
-const read_dir = (req, res) => {
-  let data = [];
-  const data_cs_xml = xml_file_with_dir(req.body.directory);
-  data_cs_xml.forEach((file_data) => {
-    data.push(get_cs(file_data));
-  });
-  res.json({ "data": data });
-}
+// const read_dir = (req, res) => {
+//   let data = [];
+//   const data_cs_xml = xml_file_with_dir(req.body.directory);
+//   data_cs_xml.forEach((file_data) => {
+//     data.push(get_cs(file_data));
+//   });
+//   res.json({ "data": data });
+// }
 
-function get_cs(file_data) {
+function get_cs(file_data, origin_file_name) {
   // gms app version
-  let file_name = file_data.file_name;
+  let file_name = origin_file_name;
   const origin_data = file_data.data.SDTResult;
   let fingerprint = origin_data.BuildInfo[0].$.fingerprint;
   let tss_model = origin_data.SDTResult_checker[0].TSS[0].$.status;
@@ -82,6 +83,6 @@ function get_cs(file_data) {
 
 module.exports = {
   statistical_index,
-  read_dir,
+  // read_dir,
   statistical_check,
 };

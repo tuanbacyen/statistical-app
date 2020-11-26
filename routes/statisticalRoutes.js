@@ -6,7 +6,7 @@ const { isLogin } = require('./checkLogin');
 
 // => router statistical
 router.get('/', isLogin, statisticalController.statistical_index);
-router.post('/read_dir', isLogin, statisticalController.read_dir);
+// router.post('/read_dir', isLogin, statisticalController.read_dir);
 router.post('/check', isLogin, statisticalController.statistical_check);
 
 module.exports = router;
